@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 
-#!/usr/bin/env python
-
 from base64 import (
     b64encode,
     b64decode,
@@ -18,7 +16,7 @@ digest.update(message)
 
 # Read shared key from file
 private_key = False
-with open ("/tmp/gpg/private_key.pem", "r") as myfile:
+with open ("private_key.pem", "r") as myfile:
     private_key = RSA.importKey(myfile.read())
 
 # Load private key and sign message
