@@ -26,4 +26,5 @@ sig = signer.sign(digest)
 # Load public key and verify message
 verifier = PKCS1_v1_5.new(private_key.publickey())
 verified = verifier.verify(digest, sig)
-assert verified
+assert verified, 'Signature verification failed'
+print 'Successfully verified message'
